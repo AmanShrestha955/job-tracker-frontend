@@ -35,6 +35,7 @@ export default function Home() {
     setParams(updater);
     setPage(1);
   };
+
   return (
     <div className="flex flex-col flex-wrap w-full justify-center min-h-screen lg:pt-16 lg:px-16 dark:bg-background bg-zinc-50 font-sans">
       <div className="flex flex-row items-center justify-between w-[95%] mx-auto mt-8 lg:mt-0">
@@ -68,6 +69,20 @@ export default function Home() {
       <div className="flex flex-row flex-wrap w-full justify-center gap-10">
         {isLoading && (
           <p className="text-sm text-gray-500 dark:text-gray-400">Loading...</p>
+        )}
+        {data && data.applications.length === 0 && (
+          <div className="flex flex-col items-center justify-center gap-2 w-full py-20">
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              {params.search || params.status
+                ? "No applications match your search"
+                : "No applications yet"}
+            </p>
+            <p className="text-sm text-gray-400 dark:text-gray-500">
+              {params.search || params.status
+                ? "Try adjusting your filters"
+                : 'Click "Add" to create your first application'}
+            </p>
+          </div>
         )}
         {data &&
           data.applications.map((item, index) => (
