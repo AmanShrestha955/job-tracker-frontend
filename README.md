@@ -33,8 +33,8 @@ This is the **frontend** repository, built with Next.js and TypeScript. It consu
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/AmanShrestha955/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/AmanShrestha955/job-tracker-frontend.git
+   cd job-tracker-frontend
    ```
 
 2. Install dependencies
