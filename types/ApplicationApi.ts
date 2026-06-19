@@ -20,8 +20,15 @@ export type getApplicationData = {
   updated_at: string;
 };
 
+export type AllApplicationData = {
+  id: number;
+  company_name: string;
+  job_title: string;
+  applied_date: string;
+};
+
 export type GetAllApplicationDataResponse = {
-  applications: getApplicationData[];
+  applications: AllApplicationData[];
   total: number;
   currentPage: number;
   totalPages: number;
@@ -33,12 +40,7 @@ export type CreateApplicationFormData = {
   job_type: Job_Type;
   status: Status;
   applied_date: string;
-  notes: string;
+  notes?: string;
 };
 
 export type Message = string;
-
-export type ErrorResponse = {
-  message: string;
-  error: string;
-};

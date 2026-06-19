@@ -8,3 +8,12 @@ export type SearchAndFilterParams = {
   search: string;
   status?: Status;
 };
+
+export type DropdownButtonProps<T> = {
+  options: T[];
+  value: T | undefined;
+  onSelect: (value: T | undefined) => void;
+  placeholder: string;
+  showAllOption?: boolean;
+  fullWidth?: boolean;
+};

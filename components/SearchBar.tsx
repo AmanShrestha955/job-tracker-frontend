@@ -15,7 +15,7 @@ export function SearchBar({ onSearch }: SearchBarProps) {
   };
 
   return (
-    <div className="flex items-center w-[90%] lg:max-w-150 my-6 shadow rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-900">
+    <div className="flex items-center w-[90%] lg:max-w-150 shadow rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-900">
       <input
         type="search"
         value={query}
